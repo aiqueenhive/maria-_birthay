@@ -1,0 +1,347 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#000;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* Netflix Intro */
+
+#intro{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background:#000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    animation:hideIntro 4s forwards;
+}
+
+.netflix-logo{
+    color:#e50914;
+    font-size:90px;
+    font-weight:800;
+    letter-spacing:8px;
+    animation:zoomLogo 3s ease;
+    text-shadow:0 0 20px #ff0000;
+}
+
+@keyframes zoomLogo{
+
+0%{
+transform:scale(.2);
+opacity:0;
+}
+
+60%{
+transform:scale(1.2);
+}
+
+100%{
+transform:scale(1);
+opacity:1;
+}
+
+}
+
+@keyframes hideIntro{
+
+0%,80%{
+opacity:1;
+}
+
+100%{
+opacity:0;
+visibility:hidden;
+}
+
+}
+
+/* Hero */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    position:relative;
+    background:linear-gradient(135deg,#0f0f0f,#200000,#000);
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.55);
+}
+
+.content{
+    position:relative;
+    z-index:2;
+    max-width:900px;
+    padding:40px;
+}
+
+.content h3{
+    color:#ff4d6d;
+    font-size:30px;
+    margin-bottom:10px;
+}
+
+.content h1{
+    font-size:70px;
+    color:#fff;
+    text-shadow:0 0 20px crimson;
+}
+
+#typing{
+    margin-top:20px;
+    font-size:22px;
+    color:#ddd;
+    min-height:70px;
+}
+
+#startBtn{
+
+margin-top:35px;
+padding:16px 40px;
+font-size:20px;
+border:none;
+border-radius:50px;
+cursor:pointer;
+background:#e50914;
+color:white;
+transition:.4s;
+
+}
+
+#startBtn:hover{
+
+transform:scale(1.08);
+background:#ff1e2d;
+box-shadow:0 0 25px red;
+
+}
+
+/* Girl Section */
+
+.girl-section{
+
+padding:100px 20px;
+text-align:center;
+background:#080808;
+
+}
+
+.girl{
+
+font-size:120px;
+animation:floatGirl 3s infinite ease-in-out;
+
+}
+
+@keyframes floatGirl{
+
+0%{transform:translateY(0);}
+50%{transform:translateY(-20px);}
+100%{transform:translateY(0);}
+
+}
+
+.girl-section h2{
+
+margin-top:20px;
+font-size:45px;
+color:#ff3d5a;
+
+}
+
+.girl-section p{
+
+margin-top:20px;
+font-size:20px;
+color:#ddd;
+max-width:700px;
+margin-inline:auto;
+
+}
+
+/* Gifts */
+
+.gift-section{
+
+padding:100px 20px;
+text-align:center;
+background:#111;
+
+}
+
+.gifts{
+
+display:flex;
+justify-content:center;
+gap:35px;
+flex-wrap:wrap;
+margin-top:50px;
+
+}
+
+.gift{
+
+width:220px;
+height:220px;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,.15);
+border-radius:25px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+font-size:70px;
+cursor:pointer;
+transition:.5s;
+
+}
+
+.gift span{
+
+font-size:18px;
+margin-top:18px;
+
+}
+
+.gift:hover{
+
+transform:translateY(-15px) scale(1.05);
+background:#e50914;
+box-shadow:0 0 30px crimson;
+
+}
+
+/* Cake */
+
+.cake{
+
+padding:100px 20px;
+text-align:center;
+background:#050505;
+
+}
+
+.cake h2{
+
+font-size:120px;
+animation:floatGirl 2s infinite;
+
+}
+
+.cake h1{
+
+font-size:50px;
+margin-top:20px;
+color:#ffd369;
+
+}
+
+/* Gallery */
+
+.gallery{
+
+padding:100px 20px;
+text-align:center;
+background:#111;
+
+}
+
+.gallery h2{
+
+font-size:45px;
+margin-bottom:40px;
+
+}
+
+.photos{
+
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:25px;
+
+}
+
+.photos img{
+
+width:300px;
+height:380px;
+object-fit:cover;
+border-radius:20px;
+transition:.5s;
+box-shadow:0 0 20px rgba(255,0,0,.3);
+
+}
+
+.photos img:hover{
+
+transform:scale(1.08);
+box-shadow:0 0 35px red;
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.netflix-logo{
+font-size:55px;
+}
+
+.content h1{
+font-size:42px;
+}
+
+.content h3{
+font-size:24px;
+}
+
+#typing{
+font-size:18px;
+}
+
+.girl{
+font-size:80px;
+}
+
+.girl-section h2{
+font-size:32px;
+}
+
+.gallery h2{
+font-size:32px;
+}
+
+.photos img{
+
+width:90%;
+height:auto;
+
+}
+
+}
